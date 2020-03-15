@@ -7,32 +7,20 @@
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
-        /><link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/custom.css" />
-		<script
-			defer
-			src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-		></script>
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/custom.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
 				<a class="navbar-item" href="/">
-					<img
-						src="img/pitaya-transparent.png"
-                    />&ensp;
-                    <strong>Pitaya</strong>
-				</a>
-
-				<a
-					role="button"
-					class="navbar-burger"
-					aria-label="menu"
-					aria-expanded="false"
-				>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
+					<img src="img/pitaya-transparent.png" />&ensp;
+					<strong>Pitaya</strong>
 				</a>
 			</div>
 		</nav>
@@ -46,5 +34,47 @@
 				</p>
 			</div>
 		</section>
+
+		<section class="container">
+			<div class="field has-addons">
+				<div class="control">
+					<input
+						class="input is-small"
+						type="text"
+						placeholder="Chicken"
+						id="add-name"
+					/>
+				</div>
+				<div class="control">
+					<a href="#!" class="button is-danger is-small" onclick="create()">
+						Create Entry
+					</a>
+				</div>
+			</div>
+
+			<table class="table is-fullwidth">
+				<thead>
+					<tr>
+						<th>Item</th>
+						<th>Count</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody id="inventory"></tbody>
+			</table>
+		</section>
+
+		<!-- Include Handlebars from a CDN -->
+		<script
+			defer
+			src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+		></script>
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+		<script src="js/scripts.js"></script>
 	</body>
 </html>
