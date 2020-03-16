@@ -1,7 +1,7 @@
 {
   "name": "pitaya",
   "version": "1.0.0",
-  "description": "Home pantry management solution",
+  "description": "Home inventory management solution",
   "main": "app.js",
   "repository": "https://github.com/itsmingjie/pitaya",
   "author": "Mingjie Jiang<jiang@mingjie.info>",
