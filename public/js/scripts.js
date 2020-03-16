@@ -8,9 +8,9 @@ $.getJSON("/api/list", function(data) {
                 <th>${this.name}</th>\
                 <td>${this.count}</td>\
                 <td id="actions-${this._id}">\
-                <a href="#!" onclick="update('${this._id}')">Update</a>\
+                <a href="#!" class="button is-small is-rounded" onclick="update('${this._id}')">Update</a>\
                 &emsp;\
-                <a href="#!" onclick="destroy('${this._id}')">Delete</a>\
+                <a href="#!" class="button is-danger is-small is-rounded" onclick="destroy('${this._id}')">Delete</a>\
                 </td>\
             </tr>`);
 	});
@@ -37,14 +37,16 @@ function push(id) {
 		count: $(`#count-${id}`).val()
 	};
 
-	$.ajax({
-		type: "POST",
-		url: "/api/update",
-		data: data,
-		success: (res) => {
-            location.reload();
-        }
-	});
+    if (data.count) {
+        $.ajax({
+            type: "POST",
+            url: "/api/update",
+            data: data,
+            success: (res) => {
+                location.reload();
+            }
+        });
+    }	
 }
 
 function destroy(id) {

@@ -4,6 +4,14 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Pitaya</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="apple-touch-icon" href="img/pitaya.png">
+		<link rel="apple-touch-startup-image" href="img/pitaya-transparent.png">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="apple-mobile-web-app-title" content="Pitaya">
+
+
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
@@ -16,7 +24,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-		<nav class="navbar" role="navigation" aria-label="main navigation">
+		<nav class="navbar is-danger" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
 				<a class="navbar-item" href="/">
 					<img src="img/pitaya-transparent.png" />&ensp;
@@ -39,14 +47,14 @@
 			<div class="field has-addons">
 				<div class="control">
 					<input
-						class="input is-small"
+						class="input"
 						type="text"
 						placeholder="Chicken"
 						id="add-name"
 					/>
 				</div>
 				<div class="control">
-					<a href="#!" class="button is-danger is-small" onclick="create()">
+					<a href="#!" class="button is-danger" onclick="create()">
 						Create Entry
 					</a>
 				</div>

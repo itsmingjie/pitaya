@@ -1,3 +1,6 @@
 body {
-    font-family: 'Alegreya', serif;
+    font-family: 'Alegreya', sans-serif;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
 }
